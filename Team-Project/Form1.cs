@@ -19,8 +19,6 @@ namespace Team_Project
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            // Assuming listBox1 is used to display a list of numbers
-            listBox4.Items.Clear(); // Clear existing items in listBox4
 
             int[] z = new int[listBox1.Items.Count]; // Initialize z array
             double[] T = new double[listBox1.Items.Count]; // Initialize T array
@@ -51,8 +49,6 @@ namespace Team_Project
                     {
                         T[i] = r2[i] * 4;
                     }
-
-                    listBox4.Items.Add($"{listBox2.Items[i]}   {T[i]}");
                 }
                 else
                 {
@@ -64,7 +60,7 @@ namespace Team_Project
         private void button1_Click(object sender, EventArgs e)
         {
             // Get the text from the multi-line text box
-            string[] lines = textBox1.Text.Split('\n');
+            string[] lines = textBox2.Text.Split('\n');
 
 
             // Clear the list box
@@ -76,7 +72,21 @@ namespace Team_Project
                 listBox1.Items.Add(line);
             }
 
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Get the text from the multi-line text box
+            string[] lines = textBox1.Text.Split('\n');
 
+
+            // Clear the list box
+            listBox2.Items.Clear();
+
+            // Add each line of text to the list box
+            foreach (string line in lines)
+            {
+                listBox2.Items.Add(line);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -112,6 +122,27 @@ namespace Team_Project
         {
             Form2 form = new();
             form.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SalaryButton_Click(object sender, EventArgs e)
+        {
+            // Get the text from the multi-line text box
+            string[] lines = textBox3.Text.Split('\n');
+
+
+            // Clear the list box
+            listBox3.Items.Clear();
+
+            // Add each line of text to the list box
+            foreach (string line in lines)
+            {
+                listBox3.Items.Add(line);
+            }
         }
     }
 }

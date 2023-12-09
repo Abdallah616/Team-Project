@@ -33,16 +33,16 @@
             listBox2 = new ListBox();
             listBox1 = new ListBox();
             panel3 = new Panel();
-            button2 = new Button();
+            NameButton = new Button();
             textBox2 = new TextBox();
             label2 = new Label();
             SHEET = new Button();
             panel1 = new Panel();
-            button3 = new Button();
+            No_Of_HoursButton = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
             panel4 = new Panel();
-            button4 = new Button();
+            RateButton = new Button();
             textBox3 = new TextBox();
             label3 = new Label();
             panel2.SuspendLayout();
@@ -69,9 +69,9 @@
             listBox3.ForeColor = SystemColors.ControlText;
             listBox3.FormattingEnabled = true;
             listBox3.ItemHeight = 15;
-            listBox3.Location = new Point(0, 391);
+            listBox3.Location = new Point(0, 421);
             listBox3.Name = "listBox3";
-            listBox3.Size = new Size(204, 109);
+            listBox3.Size = new Size(201, 49);
             listBox3.TabIndex = 0;
             listBox3.SelectedIndexChanged += listBox3_SelectedIndexChanged;
             // 
@@ -81,9 +81,9 @@
             listBox2.ForeColor = SystemColors.ControlText;
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(3, 218);
+            listBox2.Location = new Point(3, 250);
             listBox2.Name = "listBox2";
-            listBox2.Size = new Size(201, 109);
+            listBox2.Size = new Size(201, 49);
             listBox2.TabIndex = 0;
             listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
@@ -93,16 +93,16 @@
             listBox1.ForeColor = SystemColors.InfoText;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(0, 38);
+            listBox1.Location = new Point(0, 43);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(201, 94);
+            listBox1.Size = new Size(201, 49);
             listBox1.TabIndex = 0;
             // 
             // panel3
             // 
             panel3.BackColor = Color.Transparent;
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Controls.Add(button2);
+            panel3.Controls.Add(NameButton);
             panel3.Controls.Add(textBox2);
             panel3.Controls.Add(label2);
             panel3.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
@@ -111,22 +111,22 @@
             panel3.Size = new Size(625, 131);
             panel3.TabIndex = 0;
             // 
-            // button2
+            // NameButton
             // 
-            button2.BackColor = Color.SandyBrown;
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ControlText;
-            button2.Location = new Point(471, 52);
-            button2.Name = "button2";
-            button2.Size = new Size(125, 40);
-            button2.TabIndex = 3;
-            button2.Text = "INPUT DATA";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button1_Click;
+            NameButton.BackColor = Color.SandyBrown;
+            NameButton.BackgroundImageLayout = ImageLayout.Zoom;
+            NameButton.Cursor = Cursors.Hand;
+            NameButton.FlatAppearance.BorderSize = 0;
+            NameButton.FlatStyle = FlatStyle.Popup;
+            NameButton.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            NameButton.ForeColor = SystemColors.ControlText;
+            NameButton.Location = new Point(471, 52);
+            NameButton.Name = "NameButton";
+            NameButton.Size = new Size(125, 40);
+            NameButton.TabIndex = 3;
+            NameButton.Text = "INPUT DATA";
+            NameButton.UseVisualStyleBackColor = false;
+            //NameButton.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -137,6 +137,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(281, 39);
             textBox2.TabIndex = 2;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label2
             // 
@@ -147,9 +148,9 @@
             label2.ForeColor = Color.Snow;
             label2.Location = new Point(17, 50);
             label2.Name = "label2";
-            label2.Size = new Size(102, 37);
+            label2.Size = new Size(113, 37);
             label2.TabIndex = 0;
-            label2.Text = "LAB1\r\n";
+            label2.Text = "Name";
             label2.Click += label1_Click_1;
             // 
             // SHEET
@@ -163,13 +164,13 @@
             SHEET.TabIndex = 2;
             SHEET.Text = "GO TO THE SHEET";
             SHEET.UseVisualStyleBackColor = false;
-            SHEET.Click += new EventHandler(SHEET_Click_1);
+            SHEET.Click += SHEET_Click_1;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(No_Of_HoursButton);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
             panel1.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
@@ -178,22 +179,22 @@
             panel1.Size = new Size(625, 131);
             panel1.TabIndex = 0;
             // 
-            // button3
+            // No_Of_HoursButton
             // 
-            button3.BackColor = Color.SandyBrown;
-            button3.BackgroundImageLayout = ImageLayout.Zoom;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ControlText;
-            button3.Location = new Point(471, 52);
-            button3.Name = "button3";
-            button3.Size = new Size(125, 40);
-            button3.TabIndex = 3;
-            button3.Text = "INPUT DATA";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button1_Click;
+            No_Of_HoursButton.BackColor = Color.SandyBrown;
+            No_Of_HoursButton.BackgroundImageLayout = ImageLayout.Zoom;
+            No_Of_HoursButton.Cursor = Cursors.Hand;
+            No_Of_HoursButton.FlatAppearance.BorderSize = 0;
+            No_Of_HoursButton.FlatStyle = FlatStyle.Popup;
+            No_Of_HoursButton.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            No_Of_HoursButton.ForeColor = SystemColors.ControlText;
+            No_Of_HoursButton.Location = new Point(471, 52);
+            No_Of_HoursButton.Name = "No_Of_HoursButton";
+            No_Of_HoursButton.Size = new Size(125, 40);
+            No_Of_HoursButton.TabIndex = 3;
+            No_Of_HoursButton.Text = "INPUT DATA";
+            No_Of_HoursButton.UseVisualStyleBackColor = false;
+            No_Of_HoursButton.Click += new EventHandler(button3_Click);
             // 
             // textBox1
             // 
@@ -213,16 +214,16 @@
             label1.ForeColor = Color.Snow;
             label1.Location = new Point(17, 50);
             label1.Name = "label1";
-            label1.Size = new Size(102, 37);
+            label1.Size = new Size(118, 37);
             label1.TabIndex = 0;
-            label1.Text = "LAB1\r\n";
+            label1.Text = "Hours";
             label1.Click += label1_Click_1;
             // 
             // panel4
             // 
             panel4.BackColor = Color.Transparent;
             panel4.BackgroundImageLayout = ImageLayout.Stretch;
-            panel4.Controls.Add(button4);
+            panel4.Controls.Add(RateButton);
             panel4.Controls.Add(textBox3);
             panel4.Controls.Add(label3);
             panel4.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
@@ -231,22 +232,22 @@
             panel4.Size = new Size(625, 131);
             panel4.TabIndex = 0;
             // 
-            // button4
+            // RateButton
             // 
-            button4.BackColor = Color.SandyBrown;
-            button4.BackgroundImageLayout = ImageLayout.Zoom;
-            button4.Cursor = Cursors.Hand;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            button4.ForeColor = SystemColors.ControlText;
-            button4.Location = new Point(471, 52);
-            button4.Name = "button4";
-            button4.Size = new Size(125, 40);
-            button4.TabIndex = 3;
-            button4.Text = "INPUT DATA";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button1_Click;
+            RateButton.BackColor = Color.SandyBrown;
+            RateButton.BackgroundImageLayout = ImageLayout.Zoom;
+            RateButton.Cursor = Cursors.Hand;
+            RateButton.FlatAppearance.BorderSize = 0;
+            RateButton.FlatStyle = FlatStyle.Popup;
+            RateButton.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
+            RateButton.ForeColor = SystemColors.ControlText;
+            RateButton.Location = new Point(471, 52);
+            RateButton.Name = "RateButton";
+            RateButton.Size = new Size(125, 40);
+            RateButton.TabIndex = 3;
+            RateButton.Text = "INPUT DATA";
+            RateButton.UseVisualStyleBackColor = false;
+            RateButton.Click += new EventHandler(SalaryButton_Click);
             // 
             // textBox3
             // 
@@ -266,9 +267,9 @@
             label3.ForeColor = Color.Snow;
             label3.Location = new Point(17, 50);
             label3.Name = "label3";
-            label3.Size = new Size(102, 37);
+            label3.Size = new Size(92, 37);
             label3.TabIndex = 0;
-            label3.Text = "LAB1\r\n";
+            label3.Text = "Rate";
             label3.Click += label1_Click_1;
             // 
             // Form1
@@ -303,16 +304,16 @@
         public System.Windows.Forms.ListBox listBox3;
         public System.Windows.Forms.ListBox listBox2;
         public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button NameButton;
         public System.Windows.Forms.TextBox textBox2;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button SHEET;
         public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button No_Of_HoursButton;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button RateButton;
         public System.Windows.Forms.TextBox textBox3;
         public System.Windows.Forms.Label label3;
     }
