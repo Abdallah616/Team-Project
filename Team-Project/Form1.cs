@@ -144,5 +144,10 @@ namespace Team_Project
                 listBox3.Items.Add(line);
             }
         }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
