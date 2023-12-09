@@ -60,7 +60,7 @@ namespace Team_Project
         private void button1_Click(object sender, EventArgs e)
         {
             // Get the text from the multi-line text box
-            string[] lines = textBox2.Text.Split('\n');
+            string[] lines = tx_name.Text.Split('\n');
 
 
             // Clear the list box
@@ -76,7 +76,7 @@ namespace Team_Project
         private void button3_Click(object sender, EventArgs e)
         {
             // Get the text from the multi-line text box
-            string[] lines = textBox1.Text.Split('\n');
+            string[] lines = tx_hour.Text.Split('\n');
 
 
             // Clear the list box
@@ -120,7 +120,7 @@ namespace Team_Project
 
         private void SHEET_Click_1(object sender, EventArgs e)
         {
-            Form2 form = new();
+            Form2 form = new Form2(listBox1, listBox2, listBox3, textBox4);
             form.Show();
         }
 
@@ -132,7 +132,7 @@ namespace Team_Project
         private void SalaryButton_Click(object sender, EventArgs e)
         {
             // Get the text from the multi-line text box
-            string[] lines = textBox3.Text.Split('\n');
+            string[] lines = tx_rate.Text.Split('\n');
 
 
             // Clear the list box

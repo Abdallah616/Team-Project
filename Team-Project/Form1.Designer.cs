@@ -28,293 +28,335 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
-            listBox3 = new ListBox();
-            listBox2 = new ListBox();
-            listBox1 = new ListBox();
-            panel3 = new Panel();
-            NameButton = new Button();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            SHEET = new Button();
-            panel1 = new Panel();
-            No_Of_HoursButton = new Button();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            panel4 = new Panel();
-            RateButton = new Button();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            panel1.SuspendLayout();
-            panel4.SuspendLayout();
-            SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.NameButton = new System.Windows.Forms.Button();
+            this.tx_name = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SHEET = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.No_Of_HoursButton = new System.Windows.Forms.Button();
+            this.tx_hour = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.RateButton = new System.Windows.Forms.Button();
+            this.tx_rate = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(listBox3);
-            panel2.Controls.Add(listBox2);
-            panel2.Controls.Add(listBox1);
-            panel2.Location = new Point(686, 11);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(225, 542);
-            panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.listBox3);
+            this.panel2.Controls.Add(this.listBox2);
+            this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Location = new System.Drawing.Point(784, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(257, 723);
+            this.panel2.TabIndex = 1;
             // 
             // listBox3
             // 
-            listBox3.BackColor = Color.White;
-            listBox3.ForeColor = SystemColors.ControlText;
-            listBox3.FormattingEnabled = true;
-            listBox3.ItemHeight = 15;
-            listBox3.Location = new Point(0, 421);
-            listBox3.Name = "listBox3";
-            listBox3.Size = new Size(201, 49);
-            listBox3.TabIndex = 0;
-            listBox3.SelectedIndexChanged += listBox3_SelectedIndexChanged;
+            this.listBox3.BackColor = System.Drawing.Color.White;
+            this.listBox3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(0, 561);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(229, 64);
+            this.listBox3.TabIndex = 0;
             // 
             // listBox2
             // 
-            listBox2.BackColor = Color.White;
-            listBox2.ForeColor = SystemColors.ControlText;
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(3, 250);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(201, 49);
-            listBox2.TabIndex = 0;
-            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
+            this.listBox2.BackColor = System.Drawing.Color.White;
+            this.listBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(3, 333);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(229, 64);
+            this.listBox2.TabIndex = 0;
             // 
             // listBox1
             // 
-            listBox1.BackColor = Color.White;
-            listBox1.ForeColor = SystemColors.InfoText;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(0, 43);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(201, 49);
-            listBox1.TabIndex = 0;
+            this.listBox1.BackColor = System.Drawing.Color.White;
+            this.listBox1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"});
+            this.listBox1.Location = new System.Drawing.Point(0, 57);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(229, 64);
+            this.listBox1.TabIndex = 0;
             // 
             // panel3
             // 
-            panel3.BackColor = Color.Transparent;
-            panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Controls.Add(NameButton);
-            panel3.Controls.Add(textBox2);
-            panel3.Controls.Add(label2);
-            panel3.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            panel3.Location = new Point(22, 11);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(625, 131);
-            panel3.TabIndex = 0;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.NameButton);
+            this.panel3.Controls.Add(this.tx_name);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.panel3.Location = new System.Drawing.Point(25, 15);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(714, 175);
+            this.panel3.TabIndex = 0;
             // 
             // NameButton
             // 
-            NameButton.BackColor = Color.SandyBrown;
-            NameButton.BackgroundImageLayout = ImageLayout.Zoom;
-            NameButton.Cursor = Cursors.Hand;
-            NameButton.FlatAppearance.BorderSize = 0;
-            NameButton.FlatStyle = FlatStyle.Popup;
-            NameButton.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            NameButton.ForeColor = SystemColors.ControlText;
-            NameButton.Location = new Point(471, 52);
-            NameButton.Name = "NameButton";
-            NameButton.Size = new Size(125, 40);
-            NameButton.TabIndex = 3;
-            NameButton.Text = "INPUT DATA";
-            NameButton.UseVisualStyleBackColor = false;
-            //NameButton.Click += button1_Click;
+            this.NameButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.NameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.NameButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NameButton.FlatAppearance.BorderSize = 0;
+            this.NameButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NameButton.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.NameButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.NameButton.Location = new System.Drawing.Point(538, 69);
+            this.NameButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NameButton.Name = "NameButton";
+            this.NameButton.Size = new System.Drawing.Size(143, 53);
+            this.NameButton.TabIndex = 3;
+            this.NameButton.Text = "INPUT DATA";
+            this.NameButton.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // tx_name
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.Location = new Point(150, 50);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(281, 39);
-            textBox2.TabIndex = 2;
-            textBox2.TextChanged += textBox2_TextChanged;
+            this.tx_name.BackColor = System.Drawing.Color.White;
+            this.tx_name.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.tx_name.Location = new System.Drawing.Point(171, 67);
+            this.tx_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tx_name.Multiline = true;
+            this.tx_name.Name = "tx_name";
+            this.tx_name.Size = new System.Drawing.Size(321, 51);
+            this.tx_name.TabIndex = 2;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Lucida Fax", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label2.ForeColor = Color.Snow;
-            label2.Location = new Point(17, 50);
-            label2.Name = "label2";
-            label2.Size = new Size(113, 37);
-            label2.TabIndex = 0;
-            label2.Text = "Name";
-            label2.Click += label1_Click_1;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Lucida Fax", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(19, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 46);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Name";
             // 
             // SHEET
             // 
-            SHEET.BackColor = Color.Indigo;
-            SHEET.Font = new Font("Britannic Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            SHEET.ForeColor = Color.White;
-            SHEET.Location = new Point(359, 622);
-            SHEET.Name = "SHEET";
-            SHEET.Size = new Size(210, 61);
-            SHEET.TabIndex = 2;
-            SHEET.Text = "GO TO THE SHEET";
-            SHEET.UseVisualStyleBackColor = false;
-            SHEET.Click += SHEET_Click_1;
+            this.SHEET.BackColor = System.Drawing.Color.Indigo;
+            this.SHEET.Font = new System.Drawing.Font("Britannic Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SHEET.ForeColor = System.Drawing.Color.White;
+            this.SHEET.Location = new System.Drawing.Point(410, 829);
+            this.SHEET.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SHEET.Name = "SHEET";
+            this.SHEET.Size = new System.Drawing.Size(240, 81);
+            this.SHEET.TabIndex = 2;
+            this.SHEET.Text = "GO TO THE SHEET";
+            this.SHEET.UseVisualStyleBackColor = false;
+            this.SHEET.Click += new System.EventHandler(this.SHEET_Click_1);
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Transparent;
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(No_Of_HoursButton);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(label1);
-            panel1.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            panel1.Location = new Point(22, 218);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(625, 131);
-            panel1.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.No_Of_HoursButton);
+            this.panel1.Controls.Add(this.tx_hour);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.panel1.Location = new System.Drawing.Point(25, 291);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(714, 175);
+            this.panel1.TabIndex = 0;
             // 
             // No_Of_HoursButton
             // 
-            No_Of_HoursButton.BackColor = Color.SandyBrown;
-            No_Of_HoursButton.BackgroundImageLayout = ImageLayout.Zoom;
-            No_Of_HoursButton.Cursor = Cursors.Hand;
-            No_Of_HoursButton.FlatAppearance.BorderSize = 0;
-            No_Of_HoursButton.FlatStyle = FlatStyle.Popup;
-            No_Of_HoursButton.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            No_Of_HoursButton.ForeColor = SystemColors.ControlText;
-            No_Of_HoursButton.Location = new Point(471, 52);
-            No_Of_HoursButton.Name = "No_Of_HoursButton";
-            No_Of_HoursButton.Size = new Size(125, 40);
-            No_Of_HoursButton.TabIndex = 3;
-            No_Of_HoursButton.Text = "INPUT DATA";
-            No_Of_HoursButton.UseVisualStyleBackColor = false;
-            No_Of_HoursButton.Click += new EventHandler(button3_Click);
+            this.No_Of_HoursButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.No_Of_HoursButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.No_Of_HoursButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.No_Of_HoursButton.FlatAppearance.BorderSize = 0;
+            this.No_Of_HoursButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.No_Of_HoursButton.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.No_Of_HoursButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.No_Of_HoursButton.Location = new System.Drawing.Point(538, 69);
+            this.No_Of_HoursButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.No_Of_HoursButton.Name = "No_Of_HoursButton";
+            this.No_Of_HoursButton.Size = new System.Drawing.Size(143, 53);
+            this.No_Of_HoursButton.TabIndex = 3;
+            this.No_Of_HoursButton.Text = "INPUT DATA";
+            this.No_Of_HoursButton.UseVisualStyleBackColor = false;
+            this.No_Of_HoursButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox1
+            // tx_hour
             // 
-            textBox1.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.Location = new Point(150, 50);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(281, 39);
-            textBox1.TabIndex = 2;
+            this.tx_hour.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.tx_hour.Location = new System.Drawing.Point(171, 67);
+            this.tx_hour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tx_hour.Multiline = true;
+            this.tx_hour.Name = "tx_hour";
+            this.tx_hour.Size = new System.Drawing.Size(321, 51);
+            this.tx_hour.TabIndex = 2;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Lucida Fax", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = Color.Snow;
-            label1.Location = new Point(17, 50);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 37);
-            label1.TabIndex = 0;
-            label1.Text = "Hours";
-            label1.Click += label1_Click_1;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Lucida Fax", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(19, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hours";
             // 
             // panel4
             // 
-            panel4.BackColor = Color.Transparent;
-            panel4.BackgroundImageLayout = ImageLayout.Stretch;
-            panel4.Controls.Add(RateButton);
-            panel4.Controls.Add(textBox3);
-            panel4.Controls.Add(label3);
-            panel4.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            panel4.Location = new Point(22, 389);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(625, 131);
-            panel4.TabIndex = 0;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.RateButton);
+            this.panel4.Controls.Add(this.tx_rate);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.panel4.Location = new System.Drawing.Point(25, 519);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(714, 175);
+            this.panel4.TabIndex = 0;
             // 
             // RateButton
             // 
-            RateButton.BackColor = Color.SandyBrown;
-            RateButton.BackgroundImageLayout = ImageLayout.Zoom;
-            RateButton.Cursor = Cursors.Hand;
-            RateButton.FlatAppearance.BorderSize = 0;
-            RateButton.FlatStyle = FlatStyle.Popup;
-            RateButton.Font = new Font("Palatino Linotype", 10.2F, FontStyle.Italic, GraphicsUnit.Point);
-            RateButton.ForeColor = SystemColors.ControlText;
-            RateButton.Location = new Point(471, 52);
-            RateButton.Name = "RateButton";
-            RateButton.Size = new Size(125, 40);
-            RateButton.TabIndex = 3;
-            RateButton.Text = "INPUT DATA";
-            RateButton.UseVisualStyleBackColor = false;
-            RateButton.Click += new EventHandler(SalaryButton_Click);
+            this.RateButton.BackColor = System.Drawing.Color.SandyBrown;
+            this.RateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RateButton.FlatAppearance.BorderSize = 0;
+            this.RateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RateButton.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.RateButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RateButton.Location = new System.Drawing.Point(538, 69);
+            this.RateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RateButton.Name = "RateButton";
+            this.RateButton.Size = new System.Drawing.Size(143, 53);
+            this.RateButton.TabIndex = 3;
+            this.RateButton.Text = "INPUT DATA";
+            this.RateButton.UseVisualStyleBackColor = false;
+            this.RateButton.Click += new System.EventHandler(this.SalaryButton_Click);
             // 
-            // textBox3
+            // tx_rate
             // 
-            textBox3.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox3.Location = new Point(150, 50);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(281, 39);
-            textBox3.TabIndex = 2;
+            this.tx_rate.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.tx_rate.Location = new System.Drawing.Point(171, 67);
+            this.tx_rate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tx_rate.Multiline = true;
+            this.tx_rate.Name = "tx_rate";
+            this.tx_rate.Size = new System.Drawing.Size(321, 51);
+            this.tx_rate.TabIndex = 2;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Lucida Fax", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label3.ForeColor = Color.Snow;
-            label3.Location = new Point(17, 50);
-            label3.Name = "label3";
-            label3.Size = new Size(92, 37);
-            label3.TabIndex = 0;
-            label3.Text = "Rate";
-            label3.Click += label1_Click_1;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Lucida Fax", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Snow;
+            this.label3.Location = new System.Drawing.Point(19, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 46);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Rate";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(430, 739);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(276, 48);
+            this.textBox4.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Snow;
+            this.label4.Location = new System.Drawing.Point(212, 741);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(204, 36);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Days Works";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.WhatsApp_Image_2023_12_08_at_21_12_35_0ff9bb80;
-            ClientSize = new Size(913, 727);
-            Controls.Add(SHEET);
-            Controls.Add(panel2);
-            Controls.Add(panel4);
-            Controls.Add(panel1);
-            Controls.Add(panel3);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Location = new Point(150, 50);
-            Name = "Form1";
-            Text = "SALARY ";
-            Load += Form1_Load;
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Team_Project.Properties.Resources.WhatsApp_Image_2023_12_08_at_21_12_35_0ff9bb80;
+            this.ClientSize = new System.Drawing.Size(1043, 969);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.SHEET);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(150, 50);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form1";
+            this.Text = "SALARY ";
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.ListBox listBox1;
-        public System.Windows.Forms.ListBox listBox3;
-        public System.Windows.Forms.ListBox listBox2;
-        public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Button NameButton;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Button SHEET;
-        public System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button No_Of_HoursButton;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Button RateButton;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button NameButton;
+        private System.Windows.Forms.TextBox tx_name;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button SHEET;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button No_Of_HoursButton;
+        private System.Windows.Forms.TextBox tx_hour;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button RateButton;
+        private System.Windows.Forms.TextBox tx_rate;
+        private System.Windows.Forms.Label label3;
+        private TextBox textBox4;
+        private Label label4;
     }
 }
