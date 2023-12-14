@@ -93,41 +93,13 @@ namespace Team_Project
         {
 
         }
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void SHEET_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Form2 form = new Form2(listBox1, listBox2, listBox3, textBox4);
-            form.Show();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            form.ShowDialog();
+            this.Show();
         }
 
         private void SalaryButton_Click(object sender, EventArgs e)

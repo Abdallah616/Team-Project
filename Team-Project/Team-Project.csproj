@@ -7,7 +7,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>WhatsApp_Image_2023-12-14_at_10.56.35_AM.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="WhatsApp_Image_2023-12-14_at_10.56.35_AM.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

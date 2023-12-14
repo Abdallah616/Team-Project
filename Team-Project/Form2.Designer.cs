@@ -69,7 +69,7 @@
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.BackColor = Color.Cyan;
+            dataGridViewCellStyle1.BackColor = SystemColors.ButtonShadow;
             Column1.DefaultCellStyle = dataGridViewCellStyle1;
             Column1.HeaderText = "Name";
             Column1.MinimumWidth = 6;
@@ -78,7 +78,7 @@
             // Column2
             // 
             Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.BackColor = Color.Cyan;
+            dataGridViewCellStyle2.BackColor = SystemColors.ButtonShadow;
             Column2.DefaultCellStyle = dataGridViewCellStyle2;
             Column2.HeaderText = "Salary";
             Column2.MinimumWidth = 6;
