@@ -71,7 +71,7 @@ namespace Team_Project
             {
                 listBox1.Items.Add(line);
             }
-
+            
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -120,6 +120,7 @@ namespace Team_Project
 
         private void SHEET_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
             Form2 form = new Form2(listBox1, listBox2, listBox3, textBox4);
             form.Show();
         }
