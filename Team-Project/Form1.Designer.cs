@@ -92,7 +92,6 @@
             listBox1.ForeColor = SystemColors.InfoText;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "a", "b", "c", "d", "e" });
             listBox1.Location = new Point(0, 43);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(201, 49);
@@ -126,6 +125,7 @@
             NameButton.TabIndex = 3;
             NameButton.Text = "INPUT DATA";
             NameButton.UseVisualStyleBackColor = false;
+            NameButton.Click += NameButton_Click;
             // 
             // tx_name
             // 

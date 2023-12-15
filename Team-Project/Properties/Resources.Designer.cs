@@ -63,6 +63,16 @@ namespace Team_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap undo_icon_symbol_design_illustration_vector1 {
+            get {
+                object obj = ResourceManager.GetObject("undo-icon-symbol-design-illustration-vector1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2023_12_08_at_21_12_35_0ff9bb80 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2023-12-08 at 21.12.35_0ff9bb80", resourceCulture);

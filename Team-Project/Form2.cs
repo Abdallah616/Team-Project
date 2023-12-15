@@ -76,5 +76,10 @@ namespace Team_Project
                 dataGridView1.Rows.Add(listBox1.Items[i], T[i]);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
