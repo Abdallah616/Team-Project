@@ -42,22 +42,22 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
+            dataGridView1.BackgroundColor = Color.FromArgb(64, 64, 64);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridView1.Location = new Point(61, 9);
+            dataGridView1.Location = new Point(77, 78);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(779, 208);
+            dataGridView1.Size = new Size(719, 319);
             dataGridView1.TabIndex = 8;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.BackColor = SystemColors.ButtonShadow;
+            dataGridViewCellStyle1.BackColor = Color.Indigo;
             Column1.DefaultCellStyle = dataGridViewCellStyle1;
             Column1.HeaderText = "Name";
             Column1.MinimumWidth = 6;
@@ -66,7 +66,7 @@
             // Column2
             // 
             Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.BackColor = SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.BackColor = Color.Indigo;
             Column2.DefaultCellStyle = dataGridViewCellStyle2;
             Column2.HeaderText = "Salary";
             Column2.MinimumWidth = 6;
@@ -77,7 +77,7 @@
             button1.BackColor = Color.Indigo;
             button1.Cursor = Cursors.Hand;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(351, 277);
+            button1.Location = new Point(351, 458);
             button1.Name = "button1";
             button1.Size = new Size(187, 64);
             button1.TabIndex = 3;
@@ -99,8 +99,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.WhatsApp_Image_2023_12_16_at_13_26_47_810e81cc;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(907, 380);
+            ClientSize = new Size(907, 543);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
@@ -116,8 +117,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private Button button2;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private Button button2;
     }
 }
