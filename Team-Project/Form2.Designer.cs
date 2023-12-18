@@ -71,6 +71,19 @@
             Column2.HeaderText = "Salary";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
+
+            saveToExcelButton = new Button();
+            saveToExcelButton.BackColor = Color.Indigo;
+            saveToExcelButton.Cursor = Cursors.Hand;
+            saveToExcelButton.ForeColor = SystemColors.ButtonHighlight;
+            saveToExcelButton.Location = new Point(558, 458);
+            saveToExcelButton.Name = "saveToExcelButton";
+            saveToExcelButton.Size = new Size(187, 64);
+            saveToExcelButton.TabIndex = 4;
+            saveToExcelButton.Text = "SAVE TO EXCEL";
+            saveToExcelButton.UseVisualStyleBackColor = false;
+            saveToExcelButton.Click += saveToExcelButton_Click;
+
             // 
             // button1
             // 
@@ -105,6 +118,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
+            Controls.Add(saveToExcelButton);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Name = "Form2";
             Text = "Form2";
@@ -120,5 +134,6 @@
         private Button button2;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
+        private Button saveToExcelButton;
     }
 }

@@ -30,7 +30,10 @@ namespace Team_Project
             // Add each line of text to the list box
             foreach (string line in lines)
             {
-                listBox2.Items.Add(line);
+                if (line != "")
+                {
+                    listBox2.Items.Add(line);
+                }
             }
         }
 
@@ -59,7 +62,10 @@ namespace Team_Project
             // Add each line of text to the list box
             foreach (string line in lines)
             {
-                listBox3.Items.Add(line);
+                if (line != "")
+                {
+                    listBox3.Items.Add(line);
+                }
             }
         }
 
@@ -80,7 +86,10 @@ namespace Team_Project
             // Add each line of text to the list box
             foreach (string line in lines)
             {
-                listBox1.Items.Add(line);
+                if (line != "")
+                {
+                    listBox1.Items.Add(line);
+                }
             }
         }
     }

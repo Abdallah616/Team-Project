@@ -36,7 +36,50 @@ namespace Team_Project
 
         }
 
+        private void saveToExcelButton_Click(object sender, EventArgs e)
+        {
+            SaveToExcel();
+        }
+        private void SaveToExcel()
+        {
+            try
+            {
+                // Create a new Excel application
+                Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+                excelApp.Visible = true;
 
+                // Create a new workbook and add a worksheet
+                Microsoft.Office.Interop.Excel.Workbook workbook = excelApp.Workbooks.Add();
+                Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.Sheets[1];
+
+                // Copy data from DataGridView to Excel worksheet
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                    {
+                        // Check for null values before accessing the Value property
+                        object cellValue = dataGridView1[j, i].Value;
+                        worksheet.Cells[i + 1, j + 1] = cellValue != null ? cellValue.ToString() : "";
+                    }
+                }
+
+                // Save the workbook
+                workbook.SaveAs(@"C:\Users\HP\OneDrive\Desktop\Me test");
+
+                // Release Excel objects
+                workbook.Close();
+                excelApp.Quit();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions, log, or show an error message
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
             float tx = float.Parse(textBox4.Text);
