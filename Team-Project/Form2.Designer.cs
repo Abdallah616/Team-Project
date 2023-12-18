@@ -29,102 +29,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            button1 = new Button();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.saveToExcelButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.BackgroundColor = Color.FromArgb(64, 64, 64);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridView1.Location = new Point(77, 78);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(719, 319);
-            dataGridView1.TabIndex = 8;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataGridView1.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dataGridView1.Location = new System.Drawing.Point(88, 104);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(822, 425);
+            this.dataGridView1.TabIndex = 8;
             // 
             // Column1
             // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.BackColor = Color.Indigo;
-            Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            Column1.HeaderText = "Name";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column1.HeaderText = "Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.BackColor = Color.Indigo;
-            Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            Column2.HeaderText = "Salary";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-
-            saveToExcelButton = new Button();
-            saveToExcelButton.BackColor = Color.Indigo;
-            saveToExcelButton.Cursor = Cursors.Hand;
-            saveToExcelButton.ForeColor = SystemColors.ButtonHighlight;
-            saveToExcelButton.Location = new Point(558, 458);
-            saveToExcelButton.Name = "saveToExcelButton";
-            saveToExcelButton.Size = new Size(187, 64);
-            saveToExcelButton.TabIndex = 4;
-            saveToExcelButton.Text = "SAVE TO EXCEL";
-            saveToExcelButton.UseVisualStyleBackColor = false;
-            saveToExcelButton.Click += saveToExcelButton_Click;
-
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Indigo;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column2.HeaderText = "Salary";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
             // button1
             // 
-            button1.BackColor = Color.Indigo;
-            button1.Cursor = Cursors.Hand;
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(351, 458);
-            button1.Name = "button1";
-            button1.Size = new Size(187, 64);
-            button1.TabIndex = 3;
-            button1.Text = "CREATE THE SHEET";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            this.button1.BackColor = System.Drawing.Color.Indigo;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(169, 611);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 85);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "CREATE THE SHEET";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.undo_icon_symbol_design_illustration_vector1;
-            button2.Location = new Point(12, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(40, 41);
-            button2.TabIndex = 9;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Image = global::Team_Project.Properties.Resources.undo_icon_symbol_design_illustration_vector1;
+            this.button2.Location = new System.Drawing.Point(14, 16);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "Back";
+            this.button2.Size = new System.Drawing.Size(46, 46);
+            this.button2.TabIndex = 9;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.back);
+            // 
+            // saveToExcelButton
+            // 
+            this.saveToExcelButton.BackColor = System.Drawing.Color.Indigo;
+            this.saveToExcelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveToExcelButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveToExcelButton.Location = new System.Drawing.Point(638, 611);
+            this.saveToExcelButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.saveToExcelButton.Name = "saveToExcelButton";
+            this.saveToExcelButton.Size = new System.Drawing.Size(214, 85);
+            this.saveToExcelButton.TabIndex = 4;
+            this.saveToExcelButton.Text = "SAVE TO EXCEL";
+            this.saveToExcelButton.UseVisualStyleBackColor = false;
+            this.saveToExcelButton.Click += new System.EventHandler(this.saveToExcelButton_Click);
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.WhatsApp_Image_2023_12_16_at_13_26_47_810e81cc;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(907, 543);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Controls.Add(saveToExcelButton);
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
-            Name = "Form2";
-            Text = "Form2";
-            Load += Form2_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Team_Project.Properties.Resources.WhatsApp_Image_2023_12_16_at_13_26_47_810e81cc;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1037, 724);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.saveToExcelButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

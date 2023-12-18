@@ -52,7 +52,7 @@ namespace Team_Project
                 Microsoft.Office.Interop.Excel.Workbook workbook = excelApp.Workbooks.Add();
                 Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.Sheets[1];
 
-                // Copy data from DataGridView to Excel worksheet
+                // Copy data from DataGridView to Excel worksheet      //2D Array
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
                     for (int j = 0; j < dataGridView1.Columns.Count; j++)
@@ -64,11 +64,10 @@ namespace Team_Project
                 }
 
                 // Save the workbook
-                workbook.SaveAs(@"C:\Users\HP\OneDrive\Desktop\Me test");
+                workbook.SaveAs(@"C:\Users\friends\OneDrive\Desktop\test\test");
 
                 // Release Excel objects
-                workbook.Close();
-                excelApp.Quit();
+               
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
@@ -80,28 +79,32 @@ namespace Team_Project
             }
         }
         
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            float tx = float.Parse(textBox4.Text);
-            int[] z = new int[listBox2.Items.Count]; // Initialize z array
+            float tx = float.Parse(textBox4.Text);// Initialize tx == text box for days
+
+            int[] rate = new int[listBox2.Items.Count]; // Initialize rate array
+
             float[] T = new float[listBox2.Items.Count]; // Initialize T array
 
             for (int o = 0; o < listBox2.Items.Count; o++)
             {
-                z[o] = Convert.ToInt32(listBox3.Items[o]);
+               rate[o] = Convert.ToInt32(listBox3.Items[o]); //rate[]== rate
             }
             for (int i = 0; i < listBox2.Items.Count; i++)
             {
                 // Parse each item in the list
                 if (float.TryParse(listBox2.Items[i].ToString(), out float x))
                 {
-                    int[] z2 = new int[listBox2.Items.Count]; // Initialize z2 array
-                    float[] r1 = new float[listBox2.Items.Count]; // Initialize r1 array
-                    float[] r2 = new float[listBox2.Items.Count]; // Initialize r2 array
+                    int[] rate_2 = new int[listBox2.Items.Count]; // Initialize rate_2 array
 
-                    z2[i] = z[i] * 2;
-                    r1[i] = z[i] * x;
-                    r2[i] = ((40 * z[i]) + ((x - 40) * z2[i]));
+                    float[] r1 = new float[listBox2.Items.Count]; // Initialize r1 array ==fun
+
+                    float[] r2 = new float[listBox2.Items.Count]; // Initialize r2 array== doubl fun
+
+                    rate_2[i] = rate[i] * 2;
+                    r1[i] = rate[i] * x;
+                    r2[i] = ((40 * rate[i]) + ((x - 40) * rate_2[i]));
 
                     if (x <= 40)
                     {
@@ -120,9 +123,11 @@ namespace Team_Project
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void back(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }

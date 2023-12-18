@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,58 +19,8 @@ namespace Team_Project
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // Get the text from the multi-line text box
-            string[] lines = tx_hour.Text.Split('\n');
-
-
-            // Clear the list box
-            listBox2.Items.Clear();
-
-            // Add each line of text to the list box
-            foreach (string line in lines)
-            {
-                if (line != "")
-                {
-                    listBox2.Items.Add(line);
-                }
-            }
-        }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        public void SHEET_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 form1 = new Form2(listBox1, listBox2, listBox3, textBox4);
-            form1.ShowDialog();
-            this.Show();
-        }
-
-        private void SalaryButton_Click(object sender, EventArgs e)
-        {
-            // Get the text from the multi-line text box
-            string[] lines = tx_rate.Text.Split('\n');
-
-
-            // Clear the list box
-            listBox3.Items.Clear();
-
-            // Add each line of text to the list box
-            foreach (string line in lines)
-            {
-                if (line != "")
-                {
-                    listBox3.Items.Add(line);
-                }
-            }
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
         {
 
         }
@@ -92,5 +43,52 @@ namespace Team_Project
                 }
             }
         }
+        private void Hourbutton_Click(object sender, EventArgs e)
+        {
+            // Get the text from the multi-line text box
+            string[] lines = tx_hour.Text.Split('\n');
+
+
+            // Clear the list box
+            listBox2.Items.Clear();
+
+            // Add each line of text to the list box
+            foreach (string line in lines)
+            {
+                if (line != "")
+                {
+                    listBox2.Items.Add(line);
+                }
+            }
+        }
+        private void RateButton_Click(object sender, EventArgs e)
+        {
+            // Get the text from the multi-line text box
+            string[] lines = tx_rate.Text.Split('\n');
+
+
+            // Clear the list box
+            listBox3.Items.Clear();
+
+            // Add each line of text to the list box
+            foreach (string line in lines)
+            {
+                if (line != "")
+                {
+                    listBox3.Items.Add(line);
+                }
+            }
+        }
+        public void SHEET_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form1 = new Form2(listBox1, listBox2, listBox3, textBox4);
+            form1.ShowDialog();
+            this.Show();
+        }
+
+
+      
+
     }
 }

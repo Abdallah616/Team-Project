@@ -62,7 +62,6 @@
             panel2.Location = new Point(686, 11);
             panel2.Name = "panel2";
             panel2.Size = new Size(225, 542);
-            panel2.TabIndex = 1;
             // 
             // listBox3
             // 
@@ -73,7 +72,6 @@
             listBox3.Location = new Point(0, 421);
             listBox3.Name = "listBox3";
             listBox3.Size = new Size(201, 49);
-            listBox3.TabIndex = 0;
             // 
             // listBox2
             // 
@@ -84,7 +82,6 @@
             listBox2.Location = new Point(3, 250);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(201, 49);
-            listBox2.TabIndex = 0;
             // 
             // listBox1
             // 
@@ -95,7 +92,6 @@
             listBox1.Location = new Point(0, 43);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(201, 49);
-            listBox1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -108,7 +104,6 @@
             panel3.Location = new Point(22, 11);
             panel3.Name = "panel3";
             panel3.Size = new Size(625, 131);
-            panel3.TabIndex = 0;
             // 
             // NameButton
             // 
@@ -125,7 +120,7 @@
             NameButton.TabIndex = 3;
             NameButton.Text = "INPUT DATA";
             NameButton.UseVisualStyleBackColor = false;
-            NameButton.Click += NameButton_Click;
+            NameButton.Click += new EventHandler(NameButton_Click);
             // 
             // tx_name
             // 
@@ -135,7 +130,6 @@
             tx_name.Multiline = true;
             tx_name.Name = "tx_name";
             tx_name.Size = new Size(281, 39);
-            tx_name.TabIndex = 2;
             // 
             // label2
             // 
@@ -147,7 +141,6 @@
             label2.Location = new Point(17, 50);
             label2.Name = "label2";
             label2.Size = new Size(113, 37);
-            label2.TabIndex = 0;
             label2.Text = "Name";
             // 
             // SHEET
@@ -161,7 +154,7 @@
             SHEET.TabIndex = 2;
             SHEET.Text = "GO TO THE SHEET";
             SHEET.UseVisualStyleBackColor = false;
-            SHEET.Click += SHEET_Click_1;
+            SHEET.Click += new EventHandler(SHEET_Click);
             // 
             // panel1
             // 
@@ -174,7 +167,6 @@
             panel1.Location = new Point(22, 218);
             panel1.Name = "panel1";
             panel1.Size = new Size(625, 131);
-            panel1.TabIndex = 0;
             // 
             // No_Of_HoursButton
             // 
@@ -188,10 +180,9 @@
             No_Of_HoursButton.Location = new Point(471, 52);
             No_Of_HoursButton.Name = "No_Of_HoursButton";
             No_Of_HoursButton.Size = new Size(125, 40);
-            No_Of_HoursButton.TabIndex = 3;
             No_Of_HoursButton.Text = "INPUT DATA";
             No_Of_HoursButton.UseVisualStyleBackColor = false;
-            No_Of_HoursButton.Click += button3_Click;
+            No_Of_HoursButton.Click += new EventHandler(Hourbutton_Click);
             // 
             // tx_hour
             // 
@@ -200,7 +191,6 @@
             tx_hour.Multiline = true;
             tx_hour.Name = "tx_hour";
             tx_hour.Size = new Size(281, 39);
-            tx_hour.TabIndex = 2;
             // 
             // label1
             // 
@@ -212,7 +202,6 @@
             label1.Location = new Point(17, 50);
             label1.Name = "label1";
             label1.Size = new Size(118, 37);
-            label1.TabIndex = 0;
             label1.Text = "Hours";
             // 
             // panel4
@@ -226,7 +215,6 @@
             panel4.Location = new Point(22, 389);
             panel4.Name = "panel4";
             panel4.Size = new Size(625, 131);
-            panel4.TabIndex = 0;
             // 
             // RateButton
             // 
@@ -240,10 +228,9 @@
             RateButton.Location = new Point(471, 52);
             RateButton.Name = "RateButton";
             RateButton.Size = new Size(125, 40);
-            RateButton.TabIndex = 3;
             RateButton.Text = "INPUT DATA";
             RateButton.UseVisualStyleBackColor = false;
-            RateButton.Click += SalaryButton_Click;
+            RateButton.Click +=new EventHandler(RateButton_Click);
             // 
             // tx_rate
             // 
@@ -252,7 +239,6 @@
             tx_rate.Multiline = true;
             tx_rate.Name = "tx_rate";
             tx_rate.Size = new Size(281, 39);
-            tx_rate.TabIndex = 2;
             // 
             // label3
             // 
@@ -264,7 +250,6 @@
             label3.Location = new Point(17, 50);
             label3.Name = "label3";
             label3.Size = new Size(92, 37);
-            label3.TabIndex = 0;
             label3.Text = "Rate";
             // 
             // textBox4
@@ -273,7 +258,6 @@
             textBox4.Location = new Point(376, 554);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(242, 40);
-            textBox4.TabIndex = 4;
             // 
             // label4
             // 
@@ -285,7 +269,6 @@
             label4.Location = new Point(186, 556);
             label4.Name = "label4";
             label4.Size = new Size(160, 27);
-            label4.TabIndex = 4;
             label4.Text = "Days Works";
             // 
             // Form1
@@ -305,7 +288,7 @@
             Location = new Point(150, 50);
             Name = "Form1";
             Text = "SALARY ";
-            Load += Form1_Load_1;
+            Load += Form1_Load;
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
