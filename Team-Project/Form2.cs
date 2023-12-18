@@ -53,15 +53,18 @@ namespace Team_Project
                 Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.Sheets[1];
 
                 // Copy data from DataGridView to Excel worksheet      //2D Array
+                worksheet.Cells[1, 1] = "Name";
+                worksheet.Cells[1, 2] = "Salaray";
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
                     for (int j = 0; j < dataGridView1.Columns.Count; j++)
                     {
                         // Check for null values before accessing the Value property
                         object cellValue = dataGridView1[j, i].Value;
-                        worksheet.Cells[i + 1, j + 1] = cellValue != null ? cellValue.ToString() : "";
+                        worksheet.Cells[i + 2, j + 1] = cellValue != null ? cellValue.ToString() : "";
                     }
                 }
+
 
                 // Save the workbook
                 workbook.SaveAs(@"C:\Users\friends\OneDrive\Desktop\test\test");
