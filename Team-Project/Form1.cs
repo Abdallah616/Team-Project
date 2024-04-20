@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Team_Project
 {
@@ -29,6 +30,7 @@ namespace Team_Project
         StreamReader sr;
         StreamWriter sw;
         string FileName;
+        SortedDictionary<int, int> dict = new SortedDictionary<int, int>();
         private void NameButton_Click(object sender, EventArgs e)
         {
             // Get the text from the multi-line text box
@@ -97,11 +99,12 @@ namespace Team_Project
             string[] fields;
             if (record != null)
             {
-                fields = record.Split(',');
-                tx_name.Text = fields[0];
-                tx_hour.Text = fields[1];
-                tx_rate.Text = fields[2];
-                tx_days.Text = fields[3];
+                fields = record.Split('|');
+                tx_Id.Text = fields[0];
+                tx_name.Text = fields[1];
+                tx_hour.Text = fields[2];
+                tx_rate.Text = fields[3];
+                tx_days.Text = fields[4];
             }
             else
             {
@@ -124,19 +127,25 @@ namespace Team_Project
             ReadFromFile_bt.Enabled = true;
             InsertToFile_bt.Enabled = true;
             Clear_bt.Enabled = true;
+            StartOfFile_bt.Enabled = true;
+            EndOfFile_bt.Enabled = true;
+            LoadIndex_bt.Enabled = true;
+            button1.Enabled = true;
         }
 
         private void InsertToFile_bt_Click(object sender, EventArgs e)
         {
-            string record = tx_name.Text + "," + tx_hour.Text + "," + tx_rate.Text + "," + tx_days.Text;
-            sw.WriteLine(record);
+            MyFile.Seek(0, SeekOrigin.End);
+            int loc = (int)MyFile.Position;
+            sw.WriteLine($"{tx_Id.Text}|{tx_name.Text}|{tx_hour.Text}|{tx_rate.Text}|{tx_days.Text}");
             sw.Flush();
-            MessageBox.Show("Record Saved");
+            dict.Add(int.Parse(tx_Id.Text), loc);
+            MessageBox.Show("Inserted");
         }
 
         private void Clear_bt_Click(object sender, EventArgs e)
         {
-            tx_days.Text = tx_hour.Text = tx_rate.Text = tx_days.Text = listBox1.Text = listBox2.Text = listBox3.Text = null;
+            tx_Id.Text = tx_days.Text = tx_hour.Text = tx_rate.Text = tx_days.Text = listBox1.Text = listBox2.Text = listBox3.Text = null;
         }
 
         private void StartOfFile_bt_Click(object sender, EventArgs e)
@@ -149,6 +158,42 @@ namespace Team_Project
         {
             MyFile.Seek(0, SeekOrigin.End);
             MessageBox.Show("End of file");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dict.Clear();
+            textBox1.Clear();
+            textBox1.Text = "Index File :\r\n-------------\r\nkey\t\tloc\r\n";
+            string line;
+            StreamReader isr;
+            if (File.Exists("index.txt"))
+            {
+                isr = new StreamReader("index.txt");
+                while ((line = isr.ReadLine()) != null)
+                {
+                    string[] arr = line.Split('|');
+
+                    textBox1.Text += arr[0] + "\t\t" + arr[1] + Environment.NewLine;
+
+                    dict.Add(int.Parse(arr[0]), int.Parse(arr[1]));
+                }
+                isr.Close();
+                MessageBox.Show("Index File Loaded in dic.");
+                //return;
+            }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            StreamWriter isw = new StreamWriter("index.txt");
+            foreach (KeyValuePair<int,int> item in dict)
+            {
+                isw.WriteLine($"{item.Key}|{item.Value}");
+            }
+            isw.Close();
+            MessageBox.Show("Done rewrite");
         }
     }
 }

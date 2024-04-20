@@ -53,6 +53,11 @@
             listBox2 = new ListBox();
             listBox3 = new ListBox();
             panel2 = new Panel();
+            textBox1 = new TextBox();
+            LoadIndex_bt = new Button();
+            tx_Id = new TextBox();
+            label5 = new Label();
+            button1 = new Button();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -232,7 +237,7 @@
             // tx_days
             // 
             tx_days.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            tx_days.Location = new Point(376, 554);
+            tx_days.Location = new Point(251, 561);
             tx_days.Name = "tx_days";
             tx_days.Size = new Size(242, 40);
             tx_days.TabIndex = 1;
@@ -244,7 +249,7 @@
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Lucida Fax", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Snow;
-            label4.Location = new Point(186, 556);
+            label4.Location = new Point(22, 567);
             label4.Name = "label4";
             label4.Size = new Size(160, 27);
             label4.TabIndex = 0;
@@ -372,17 +377,80 @@
             panel2.Controls.Add(listBox3);
             panel2.Controls.Add(listBox2);
             panel2.Controls.Add(listBox1);
-            panel2.Location = new Point(1006, 36);
+            panel2.Location = new Point(1231, 76);
             panel2.Name = "panel2";
             panel2.Size = new Size(225, 484);
             panel2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(746, 192);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(448, 286);
+            textBox1.TabIndex = 13;
+            // 
+            // LoadIndex_bt
+            // 
+            LoadIndex_bt.BackColor = Color.Indigo;
+            LoadIndex_bt.Enabled = false;
+            LoadIndex_bt.Font = new Font("Britannic Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            LoadIndex_bt.ForeColor = Color.White;
+            LoadIndex_bt.Location = new Point(839, 522);
+            LoadIndex_bt.Name = "LoadIndex_bt";
+            LoadIndex_bt.Size = new Size(92, 61);
+            LoadIndex_bt.TabIndex = 14;
+            LoadIndex_bt.Text = "Load Index";
+            LoadIndex_bt.UseVisualStyleBackColor = false;
+            LoadIndex_bt.Click += button1_Click;
+            // 
+            // tx_Id
+            // 
+            tx_Id.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
+            tx_Id.Location = new Point(172, 158);
+            tx_Id.Multiline = true;
+            tx_Id.Name = "tx_Id";
+            tx_Id.Size = new Size(281, 39);
+            tx_Id.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.FlatStyle = FlatStyle.Flat;
+            label5.Font = new Font("Lucida Fax", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label5.ForeColor = Color.Snow;
+            label5.Location = new Point(39, 158);
+            label5.Name = "label5";
+            label5.Size = new Size(50, 37);
+            label5.TabIndex = 4;
+            label5.Text = "Id";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Indigo;
+            button1.Enabled = false;
+            button1.Font = new Font("Britannic Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(694, 522);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 61);
+            button1.TabIndex = 15;
+            button1.Text = "Rewrite";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.WhatsApp_Image_2023_12_08_at_21_12_35_0ff9bb80;
-            ClientSize = new Size(1262, 727);
+            ClientSize = new Size(1468, 727);
+            Controls.Add(button1);
+            Controls.Add(tx_Id);
+            Controls.Add(label5);
+            Controls.Add(LoadIndex_bt);
+            Controls.Add(textBox1);
             Controls.Add(EndOfFile_bt);
             Controls.Add(StartOfFile_bt);
             Controls.Add(Clear_bt);
@@ -438,5 +506,10 @@
         private ListBox listBox2;
         private ListBox listBox3;
         private Panel panel2;
+        private TextBox textBox1;
+        private Button LoadIndex_bt;
+        private TextBox tx_Id;
+        private Label label5;
+        private Button button1;
     }
 }
