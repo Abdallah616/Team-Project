@@ -58,10 +58,13 @@
             tx_Id = new TextBox();
             label5 = new Label();
             button1 = new Button();
+            panel5 = new Panel();
+            Exit_bt = new Button();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
             panel2.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel3
@@ -72,9 +75,9 @@
             panel3.Controls.Add(tx_name);
             panel3.Controls.Add(label2);
             panel3.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            panel3.Location = new Point(22, 11);
+            panel3.Location = new Point(22, 107);
             panel3.Name = "panel3";
-            panel3.Size = new Size(625, 131);
+            panel3.Size = new Size(625, 100);
             panel3.TabIndex = 6;
             // 
             // NameButton
@@ -98,7 +101,7 @@
             // 
             tx_name.BackColor = Color.White;
             tx_name.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            tx_name.Location = new Point(150, 50);
+            tx_name.Location = new Point(147, 31);
             tx_name.Multiline = true;
             tx_name.Name = "tx_name";
             tx_name.Size = new Size(281, 39);
@@ -111,7 +114,7 @@
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Lucida Fax", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label2.ForeColor = Color.Snow;
-            label2.Location = new Point(17, 50);
+            label2.Location = new Point(17, 33);
             label2.Name = "label2";
             label2.Size = new Size(113, 37);
             label2.TabIndex = 5;
@@ -122,7 +125,7 @@
             SHEET.BackColor = Color.Indigo;
             SHEET.Font = new Font("Britannic Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             SHEET.ForeColor = Color.White;
-            SHEET.Location = new Point(743, 645);
+            SHEET.Location = new Point(947, 654);
             SHEET.Name = "SHEET";
             SHEET.Size = new Size(144, 61);
             SHEET.TabIndex = 2;
@@ -190,9 +193,9 @@
             panel4.Controls.Add(tx_rate);
             panel4.Controls.Add(label3);
             panel4.Font = new Font("Palatino Linotype", 24F, FontStyle.Italic, GraphicsUnit.Point);
-            panel4.Location = new Point(22, 389);
+            panel4.Location = new Point(22, 364);
             panel4.Name = "panel4";
-            panel4.Size = new Size(625, 131);
+            panel4.Size = new Size(625, 105);
             panel4.TabIndex = 4;
             // 
             // RateButton
@@ -384,10 +387,10 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(746, 192);
+            textBox1.Location = new Point(694, 27);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(448, 286);
+            textBox1.Size = new Size(500, 451);
             textBox1.TabIndex = 13;
             // 
             // LoadIndex_bt
@@ -407,10 +410,10 @@
             // tx_Id
             // 
             tx_Id.Font = new Font("Palatino Linotype", 18F, FontStyle.Italic, GraphicsUnit.Point);
-            tx_Id.Location = new Point(172, 158);
+            tx_Id.Location = new Point(147, 32);
             tx_Id.Multiline = true;
             tx_Id.Name = "tx_Id";
-            tx_Id.Size = new Size(281, 39);
+            tx_Id.Size = new Size(284, 39);
             tx_Id.TabIndex = 3;
             // 
             // label5
@@ -420,11 +423,12 @@
             label5.FlatStyle = FlatStyle.Flat;
             label5.Font = new Font("Lucida Fax", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label5.ForeColor = Color.Snow;
-            label5.Location = new Point(39, 158);
+            label5.Location = new Point(29, 32);
             label5.Name = "label5";
             label5.Size = new Size(50, 37);
             label5.TabIndex = 4;
             label5.Text = "Id";
+            label5.Click += label5_Click;
             // 
             // button1
             // 
@@ -440,15 +444,39 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
+            // panel5
+            // 
+            panel5.BackColor = Color.Transparent;
+            panel5.Controls.Add(label5);
+            panel5.Controls.Add(tx_Id);
+            panel5.Location = new Point(22, 12);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(622, 89);
+            panel5.TabIndex = 16;
+            // 
+            // Exit_bt
+            // 
+            Exit_bt.BackColor = Color.Indigo;
+            Exit_bt.Enabled = false;
+            Exit_bt.Font = new Font("Britannic Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            Exit_bt.ForeColor = Color.White;
+            Exit_bt.Location = new Point(695, 645);
+            Exit_bt.Name = "Exit_bt";
+            Exit_bt.Size = new Size(92, 61);
+            Exit_bt.TabIndex = 17;
+            Exit_bt.Text = "Exit";
+            Exit_bt.UseVisualStyleBackColor = false;
+            Exit_bt.Click += Exit_bt_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.WhatsApp_Image_2023_12_08_at_21_12_35_0ff9bb80;
             ClientSize = new Size(1468, 727);
+            Controls.Add(Exit_bt);
+            Controls.Add(panel5);
             Controls.Add(button1);
-            Controls.Add(tx_Id);
-            Controls.Add(label5);
             Controls.Add(LoadIndex_bt);
             Controls.Add(textBox1);
             Controls.Add(EndOfFile_bt);
@@ -476,6 +504,8 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel2.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -511,5 +541,7 @@
         private TextBox tx_Id;
         private Label label5;
         private Button button1;
+        private Panel panel5;
+        private Button Exit_bt;
     }
 }

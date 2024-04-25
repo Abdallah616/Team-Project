@@ -188,12 +188,25 @@ namespace Team_Project
         private void button1_Click_1(object sender, EventArgs e)
         {
             StreamWriter isw = new StreamWriter("index.txt");
-            foreach (KeyValuePair<int,int> item in dict)
+            foreach (KeyValuePair<int, int> item in dict)
             {
                 isw.WriteLine($"{item.Key}|{item.Value}");
             }
             isw.Close();
             MessageBox.Show("Done rewrite");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit_bt_Click(object sender, EventArgs e)
+        {
+            sw.Close();
+            sr.Close();
+            MyFile.Close();
+            Dispose();
         }
     }
 }
