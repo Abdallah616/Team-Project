@@ -31,67 +31,6 @@ namespace Team_Project
         StreamWriter sw;
         string FileName;
         SortedDictionary<int, int> dict = new SortedDictionary<int, int>();
-        private void NameButton_Click(object sender, EventArgs e)
-        {
-            // Get the text from the multi-line text box
-            string[] lines = tx_name.Text.Split('\n');
-
-
-            // Clear the list box
-            listBox1.Items.Clear();
-
-            // Add each line of text to the list box
-            foreach (string line in lines)
-            {
-                if (line != "")
-                {
-                    listBox1.Items.Add(line);
-                }
-            }
-        }
-        private void Hourbutton_Click(object sender, EventArgs e)
-        {
-            // Get the text from the multi-line text box
-            string[] lines = tx_hour.Text.Split('\n');
-
-
-            // Clear the list box
-            listBox2.Items.Clear();
-
-            // Add each line of text to the list box
-            foreach (string line in lines)
-            {
-                if (line != "")
-                {
-                    listBox2.Items.Add(line);
-                }
-            }
-        }
-        private void RateButton_Click(object sender, EventArgs e)
-        {
-            // Get the text from the multi-line text box
-            string[] lines = tx_rate.Text.Split('\n');
-
-
-            // Clear the list box
-            listBox3.Items.Clear();
-
-            // Add each line of text to the list box
-            foreach (string line in lines)
-            {
-                if (line != "")
-                {
-                    listBox3.Items.Add(line);
-                }
-            }
-        }
-        public void SHEET_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 form1 = new Form2(listBox1, listBox2, listBox3, tx_days);
-            form1.ShowDialog();
-            this.Show();
-        }
 
         private void ReadFromFile_bt_Click(object sender, EventArgs e)
         {
@@ -131,6 +70,7 @@ namespace Team_Project
             EndOfFile_bt.Enabled = true;
             LoadIndex_bt.Enabled = true;
             button1.Enabled = true;
+            Exit_bt.Enabled = true;
         }
 
         private void InsertToFile_bt_Click(object sender, EventArgs e)
@@ -145,7 +85,7 @@ namespace Team_Project
 
         private void Clear_bt_Click(object sender, EventArgs e)
         {
-            tx_Id.Text = tx_days.Text = tx_hour.Text = tx_rate.Text = tx_days.Text = listBox1.Text = listBox2.Text = listBox3.Text = null;
+            tx_Id.Text = tx_name.Text = tx_hour.Text = tx_rate.Text = tx_days.Text = null;
         }
 
         private void StartOfFile_bt_Click(object sender, EventArgs e)
@@ -207,6 +147,11 @@ namespace Team_Project
             sr.Close();
             MyFile.Close();
             Dispose();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
