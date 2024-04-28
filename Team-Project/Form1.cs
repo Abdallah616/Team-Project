@@ -1,4 +1,3 @@
-using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +70,8 @@ namespace Team_Project
             LoadIndex_bt.Enabled = true;
             button1.Enabled = true;
             Exit_bt.Enabled = true;
+            search_bt.Enabled = true;
+            delete_bt.Enabled = true;
         }
 
         private void InsertToFile_bt_Click(object sender, EventArgs e)
@@ -100,7 +101,7 @@ namespace Team_Project
             MessageBox.Show("End of file");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadIndex_bt_Click(object sender, EventArgs e)
         {
             dict.Clear();
             textBox1.Clear();
@@ -125,7 +126,7 @@ namespace Team_Project
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void UpdateIndex_bt_Click(object sender, EventArgs e)
         {
             StreamWriter isw = new StreamWriter("index.txt");
             foreach (KeyValuePair<int, int> item in dict)
@@ -136,9 +137,39 @@ namespace Team_Project
             MessageBox.Show("Done rewrite");
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        public bool BS(int[] arr, int K) //binary search method to use it in the search button
         {
+            int f = 0, L = arr.Length - 1; int mid = (f + L) / 2;
+            while (f <= L)
+            {
+                mid = (f + L) / 2;
+                if (K < arr[mid])
+                {
+                    L = mid - 1;
+                }
+                else if (K > arr[mid])
+                    f = mid + 1;
+                else
+                    return true;
+            }
+            return false;
+        }
 
+        private void Search_bt_Click(object sender, EventArgs e)
+        {
+            if (BS(dict.Keys.ToArray(), int.Parse(tx_Id.Text)))
+            {
+                MyFile.Seek(dict[int.Parse(tx_Id.Text)], SeekOrigin.Begin);
+                string line = sr.ReadLine();
+                string[] arr = line.Split('|');
+                tx_Id.Text = arr[0];
+                tx_name.Text = arr[1];
+                tx_hour.Text = arr[2];
+                tx_rate.Text = arr[3];
+                tx_days.Text = arr[4];
+                return;
+            }
+            MessageBox.Show("Not Found");
         }
 
         private void Exit_bt_Click(object sender, EventArgs e)
@@ -149,9 +180,18 @@ namespace Team_Project
             Dispose();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Delete_bt_Click(object sender, EventArgs e)
         {
-
+            if (BS(dict.Keys.ToArray(), int.Parse(tx_Id.Text)))
+            {
+                MyFile.Seek(dict[int.Parse(tx_Id.Text)], SeekOrigin.Begin);
+                sw.Write("*");
+                sw.Flush();
+                dict.Remove(int.Parse(tx_Id.Text));
+                MessageBox.Show("done");
+                return;
+            }
+            MessageBox.Show("Not Found");
         }
     }
 }

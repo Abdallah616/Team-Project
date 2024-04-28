@@ -42,46 +42,46 @@ namespace Team_Project
         }
         private void SaveToExcel()
         {
-            try
-            {
-                // Create a new Excel application
-                Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
-                excelApp.Visible = true;
+            //try
+            //{
+            //    // Create a new Excel application
+            //    Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+            //    excelApp.Visible = true;
 
-                // Create a new workbook and add a worksheet
-                Microsoft.Office.Interop.Excel.Workbook workbook = excelApp.Workbooks.Add();
-                Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.Sheets[1];
+            //    // Create a new workbook and add a worksheet
+            //    Microsoft.Office.Interop.Excel.Workbook workbook = excelApp.Workbooks.Add();
+            //    Microsoft.Office.Interop.Excel.Worksheet worksheet = workbook.Sheets[1];
 
-                // Copy data from DataGridView to Excel worksheet      //2D Array
-                worksheet.Cells[1, 1] = "Name";
-                worksheet.Cells[1, 2] = "Salaray";
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                {
-                    for (int j = 0; j < dataGridView1.Columns.Count; j++)
-                    {
-                        // Check for null values before accessing the Value property
-                        object cellValue = dataGridView1[j, i].Value;
-                        worksheet.Cells[i + 2, j + 1] = cellValue != null ? cellValue.ToString() : "";
-                    }
-                }
+            //    // Copy data from DataGridView to Excel worksheet      //2D Array
+            //    worksheet.Cells[1, 1] = "Name";
+            //    worksheet.Cells[1, 2] = "Salaray";
+            //    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            //    {
+            //        for (int j = 0; j < dataGridView1.Columns.Count; j++)
+            //        {
+            //            // Check for null values before accessing the Value property
+            //            object cellValue = dataGridView1[j, i].Value;
+            //            worksheet.Cells[i + 2, j + 1] = cellValue != null ? cellValue.ToString() : "";
+            //        }
+            //    }
 
 
-                // Save the workbook
-                workbook.SaveAs(@"C:\Users\friends\OneDrive\Desktop\test\test");
+            //    // Save the workbook
+            //    workbook.SaveAs(@"C:\Users\friends\OneDrive\Desktop\test\test");
 
-                // Release Excel objects
-               
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
-            }
-            catch (Exception ex)
-            {
-                // Handle exceptions, log, or show an error message
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //    // Release Excel objects
+
+            //    System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
+            //    System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+            //    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Handle exceptions, log, or show an error message
+            //    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             float tx = float.Parse(textBox4.Text);// Initialize tx == text box for days
@@ -92,7 +92,7 @@ namespace Team_Project
 
             for (int o = 0; o < listBox2.Items.Count; o++)
             {
-               rate[o] = Convert.ToInt32(listBox3.Items[o]); //rate[]== rate
+                rate[o] = Convert.ToInt32(listBox3.Items[o]); //rate[]== rate
             }
             for (int i = 0; i < listBox2.Items.Count; i++)
             {
@@ -131,6 +131,9 @@ namespace Team_Project
             this.Close();
         }
 
-        
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
