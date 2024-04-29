@@ -79,24 +79,29 @@ namespace Team_Project
         {
             MyFile.Seek(0, SeekOrigin.End);
             int loc = (int)MyFile.Position;
-            sw.WriteLine($"{tx_Id.Text}|{tx_name.Text}|{tx_hour.Text}|{tx_rate.Text}|{tx_days.Text}");
+            sw.WriteLine($"{tx_Id.Text}|{tx_name.Text}|{tx_hour.Text}|{tx_rate.Text}|{tx_days.Text}|{CalculateSalary()}");
             sw.Flush();
             dict.Add(int.Parse(tx_Id.Text), loc);
             MessageBox.Show("Inserted");
-            CalculateSalary();
         }
 
-        private void CalculateSalary()
+        private double CalculateSalary()
         {
-            MakeSalaryFile();
-            throw new NotImplementedException();
+            double wage,weeks;
+            double hours = double.Parse(tx_hour.Text);
+            double rate = double.Parse(tx_rate.Text);
+            double days = double.Parse(tx_days.Text);
+            if(hours > 40)
+            {
+                wage = (hours - 40) * (rate * 2);
+                wage = wage + (40 * rate);
+            }
+            else
+            wage = hours * rate;
+            weeks = days / 7;
+            return weeks * wage;
         }
 
-        private void MakeSalaryFile()
-        {
-            salaryFile = new FileStream("salaryFile.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            throw new NotImplementedException();
-        }
 
         private void Clear_bt_Click(object sender, EventArgs e)
         {
