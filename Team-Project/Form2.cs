@@ -84,15 +84,15 @@ namespace Team_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            float tx = float.Parse(textBox4.Text);// Initialize tx == text box for days
+            float days = float.Parse(textBox4.Text);// Initialize tx == text box for days
 
             int[] rate = new int[listBox2.Items.Count]; // Initialize rate array
 
             float[] T = new float[listBox2.Items.Count]; // Initialize T array
 
-            for (int o = 0; o < listBox2.Items.Count; o++)
+            for (int i = 0; i < listBox2.Items.Count; i++)
             {
-                rate[o] = Convert.ToInt32(listBox3.Items[o]); //rate[]== rate
+                rate[i] = Convert.ToInt32(listBox3.Items[i]); //rate[]== rate
             }
             for (int i = 0; i < listBox2.Items.Count; i++)
             {
@@ -111,11 +111,11 @@ namespace Team_Project
 
                     if (x <= 40)
                     {
-                        T[i] = r1[i] * (tx / 7);
+                        T[i] = r1[i] * (days / 7);
                     }
                     else
                     {
-                        T[i] = r2[i] * (tx / 7);
+                        T[i] = r2[i] * (days / 7);
                     }
                 }
             }

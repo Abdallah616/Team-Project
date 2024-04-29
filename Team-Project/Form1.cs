@@ -26,6 +26,7 @@ namespace Team_Project
 
         }
         FileStream MyFile;
+        FileStream salaryFile;
         StreamReader sr;
         StreamWriter sw;
         string FileName;
@@ -82,6 +83,19 @@ namespace Team_Project
             sw.Flush();
             dict.Add(int.Parse(tx_Id.Text), loc);
             MessageBox.Show("Inserted");
+            CalculateSalary();
+        }
+
+        private void CalculateSalary()
+        {
+            MakeSalaryFile();
+            throw new NotImplementedException();
+        }
+
+        private void MakeSalaryFile()
+        {
+            salaryFile = new FileStream("salaryFile.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            throw new NotImplementedException();
         }
 
         private void Clear_bt_Click(object sender, EventArgs e)
